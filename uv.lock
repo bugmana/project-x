@@ -408,38 +408,8 @@ wheels = [
 
 [[package]]
 name = "google-api-core"
-version = "2.25.2"
-source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version >= '3.15'",
-    "python_full_version == '3.14.*'",
-]
-dependencies = [
-    { name = "google-auth" },
-    { name = "googleapis-common-protos" },
-    { name = "proto-plus" },
-    { name = "protobuf" },
-    { name = "requests" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/09/cd/63f1557235c2440fe0577acdbc32577c5c002684c58c7f4d770a92366a24/google_api_core-2.25.2.tar.gz", hash = "sha256:1c63aa6af0d0d5e37966f157a77f9396d820fba59f9e43e9415bc3dc5baff300", size = 166266, upload-time = "2025-10-03T00:07:34.778Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/c8/d8/894716a5423933f5c8d2d5f04b16f052a515f78e815dab0c2c6f1fd105dc/google_api_core-2.25.2-py3-none-any.whl", hash = "sha256:e9a8f62d363dc8424a8497f4c2a47d6bcda6c16514c935629c257ab5d10210e7", size = 162489, upload-time = "2025-10-03T00:07:32.924Z" },
-]
-
-[package.optional-dependencies]
-grpc = [
-    { name = "grpcio" },
-    { name = "grpcio-status" },
-]
-
-[[package]]
-name = "google-api-core"
 version = "2.30.3"
 source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version == '3.13.*'",
-    "python_full_version < '3.13'",
-]
 dependencies = [
     { name = "google-auth" },
     { name = "googleapis-common-protos" },
@@ -463,8 +433,7 @@ name = "google-api-python-client"
 version = "2.199.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "google-api-core", version = "2.25.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
-    { name = "google-api-core", version = "2.30.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "google-api-core" },
     { name = "google-auth" },
     { name = "google-auth-httplib2" },
     { name = "httplib2" },
@@ -511,8 +480,7 @@ name = "google-cloud-appengine-logging"
 version = "1.10.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "google-api-core", version = "2.25.2", source = { registry = "https://pypi.org/simple" }, extra = ["grpc"], marker = "python_full_version >= '3.14'" },
-    { name = "google-api-core", version = "2.30.3", source = { registry = "https://pypi.org/simple" }, extra = ["grpc"], marker = "python_full_version < '3.14'" },
+    { name = "google-api-core", extra = ["grpc"] },
     { name = "google-auth" },
     { name = "grpcio" },
     { name = "proto-plus" },
@@ -541,8 +509,7 @@ name = "google-cloud-core"
 version = "2.5.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "google-api-core", version = "2.25.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
-    { name = "google-api-core", version = "2.30.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "google-api-core" },
     { name = "google-auth" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/dc/24/6ca08b0a03c7b0c620427503ab00353a4ae806b848b93bcea18b6b76fde6/google_cloud_core-2.5.1.tar.gz", hash = "sha256:3dc94bdec9d05a31d9f355045ed0f369fbc0d8c665076c734f065d729800f811", size = 36078, upload-time = "2026-03-30T22:50:08.057Z" }
@@ -552,20 +519,19 @@ wheels = [
 
 [[package]]
 name = "google-cloud-firestore"
-version = "2.28.1"
+version = "2.30.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "google-api-core", version = "2.25.2", source = { registry = "https://pypi.org/simple" }, extra = ["grpc"], marker = "python_full_version >= '3.14'" },
-    { name = "google-api-core", version = "2.30.3", source = { registry = "https://pypi.org/simple" }, extra = ["grpc"], marker = "python_full_version < '3.14'" },
+    { name = "google-api-core", extra = ["grpc"] },
     { name = "google-auth" },
     { name = "google-cloud-core" },
     { name = "grpcio" },
     { name = "proto-plus" },
     { name = "protobuf" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/a0/8a/cf7722ce8dec68f7ad67d47fb7696301c7b7635f73d291f57e76c0a0a2b2/google_cloud_firestore-2.28.1.tar.gz", hash = "sha256:833fefd9a8b9c68c750da1c0fdd93e4ca1a3ab728081c7d6c57c362e06accf8b", size = 651748, upload-time = "2026-08-06T06:24:23.639Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/ca/ec/5d88afbf5b0a06f68fe632cfe0729d39ef3f26468334d03be7705a873ab5/google_cloud_firestore-2.30.0.tar.gz", hash = "sha256:4959011b0dba6c71c056653ace1caef362169475314eddb036683010e99d98eb", size = 658312, upload-time = "2026-09-03T22:31:11.811Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/56/95/b774e13e1cf8a1b9f24e453ae7968cfc9566e266a6eb88cd583c92fa5e4b/google_cloud_firestore-2.28.1-py3-none-any.whl", hash = "sha256:972ac92717c8c0c1ead18c28a3d6f739253cdf0940039bc172d5cbbbb399c6fd", size = 431872, upload-time = "2026-08-06T06:23:15.367Z" },
+    { url = "https://files.pythonhosted.org/packages/30/67/c0ccbec09c76f0750d736c0138d7380f9693c8fa8e8a33babc6ce6e50556/google_cloud_firestore-2.30.0-py3-none-any.whl", hash = "sha256:85098db598fbd8747efd2265836152f2f05abfb2b6e1c001a31cdce0964ba447", size = 436499, upload-time = "2026-09-03T22:30:32.085Z" },
 ]
 
 [[package]]
@@ -573,8 +539,7 @@ name = "google-cloud-logging"
 version = "3.16.3"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "google-api-core", version = "2.25.2", source = { registry = "https://pypi.org/simple" }, extra = ["grpc"], marker = "python_full_version >= '3.14'" },
-    { name = "google-api-core", version = "2.30.3", source = { registry = "https://pypi.org/simple" }, extra = ["grpc"], marker = "python_full_version < '3.14'" },
+    { name = "google-api-core", extra = ["grpc"] },
     { name = "google-auth" },
     { name = "google-cloud-appengine-logging" },
     { name = "google-cloud-audit-log" },
