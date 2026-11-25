@@ -3,4 +3,4 @@ google-cloud-logging>=3.17.0
 google-genai>=3.3.0
 requests>=2.34.2
 google-api-python-client>=2.202.0
-google-auth>=2.62.2
+google-auth>=2.63.1
